@@ -5,8 +5,12 @@ public class Rectangle extends Shape{
     private int[] bottomRightXY;
 
     public Rectangle(int[] topLeftXY, int[] bottomRightXY) {
-        this.topLeftXY = topLeftXY;
-        this.bottomRightXY = bottomRightXY;
+        if (topLeftXY.length == 2 && bottomRightXY.length == 2) {
+            this.topLeftXY = topLeftXY;
+            this.bottomRightXY = bottomRightXY;
+        } else {
+            System.out.println("Кол-во координат должно быть две");
+        }
     }
 
     @Override
